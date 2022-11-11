@@ -13,14 +13,8 @@ function Router({ toggleDark, isDark }: IRouterProps) {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path={`${process.env.PUBLIC_URL}/`}
-          element={<Coins toggleDark={toggleDark} />}
-        />
-        <Route
-          path={`${process.env.PUBLIC_URL}/:coinId`}
-          element={<Coin isDark={isDark} />}
-        >
+        <Route path="/" element={<Coins toggleDark={toggleDark} />} />
+        <Route path="/:coinId" element={<Coin isDark={isDark} />}>
           <Route path="price" element={<Price />} />
           <Route path="chart" element={<Chart />} />
         </Route>
