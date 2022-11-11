@@ -13,10 +13,7 @@ function Router({ toggleDark, isDark }: IRouterProps) {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/coin-tracker"
-          element={<Coins toggleDark={toggleDark} />}
-        />
+        <Route path="/" element={<Coins toggleDark={toggleDark} />} />
         <Route path="/:coinId" element={<Coin isDark={isDark} />}>
           <Route path="price" element={<Price />} />
           <Route path="chart" element={<Chart />} />
