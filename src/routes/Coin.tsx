@@ -205,7 +205,7 @@ function Coin({ isDark }: ICoinProps) {
         {/* url을 직접 쳐서 들어올 때는 "로딩중" 혹은 데이터에서 받아온 이름을, 홈화면을 통해 링크로 들어오면 스테이트로 받아온 코인 이름을 볼 수 있음. 
             -> 두 이름의 차이와 사용성을 잘 숙지하고 있자. */}
         <Home>
-          <Link to="/">Go Home</Link>
+          <Link to="/coin-tracker">Go Home</Link>
         </Home>
       </Header>
       {loading ? (
